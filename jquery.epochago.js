@@ -8,6 +8,7 @@ $.fn.epochago = function(options) {
 	return this.each(function() {
 
 		obj = $(this);
+		alert(obj.attr('title'));
 		if (obj.attr('title') != undefined) {
 			var body = obj.attr('title');
 		} else {
