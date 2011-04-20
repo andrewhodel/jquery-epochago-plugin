@@ -36,6 +36,8 @@ To have the timestamps update automatically, simply setup a setInterval timer ou
 
 This will update every 60 seconds (60000ms)
 
+The file 'test.php' showcases the example above with some dynamically generated timestamps.
+
 ## Exceptions
 
 Make sure to not include a title attribute on the element containing the unix epoch timestamp.
