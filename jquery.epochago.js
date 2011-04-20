@@ -16,7 +16,7 @@ $.fn.epochago = function(options) {
 		var ts = Math.round((new Date()).getTime() / 1000);
 		var diff = ts - body;
 
-		alert(diff);
+		alert(diff+' sec ago');
 
 	});
 };
