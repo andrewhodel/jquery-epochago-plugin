@@ -22,6 +22,7 @@ $.fn.epochago = function(options) {
 		var str = '';
 
 		function pStr(count, period) {
+			count = Math.round(count);
 			if (count > 1) {
 				return 'about '+count+' '+period+'s ago';
 			} else {
