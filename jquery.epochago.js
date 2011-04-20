@@ -42,7 +42,7 @@ $.fn.epochago = function(options) {
 			str = pStr(seconds, 'second');
 		}
 
-		alert(str);
+		obj.html(str);
 
 	});
 };
