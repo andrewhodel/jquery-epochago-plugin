@@ -12,7 +12,11 @@ $.fn.epochago = function(options) {
 		obj = $(this);
 		var body = obj.html();
 
-		alert(body);
+		// get time since in seconds
+		var ts = Math.round((new Date()).getTime() / 1000);
+		var diff = ts - body;
+
+		alert(diff);
 
 	});
 };
