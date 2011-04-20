@@ -9,7 +9,7 @@ $.fn.epochago = function(options) {
 
 	return this.each(function() {
 
-		function refresh() {
+		function refresh(this) {
 		obj = $(this);
 		var body = obj.html();
 
@@ -46,7 +46,7 @@ $.fn.epochago = function(options) {
 		obj.html(str);
 		}
 
-		refresh();
+		refresh(this);
 		setInterval(refresh, 3000);
 
 	});
