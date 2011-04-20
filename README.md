@@ -11,11 +11,9 @@ First, load jQuery and the plugin:
 
 Next, attach it to any elements on DOM ready:
 
-	<pre>
-		$(document).ready(function() {
-			$('.epochago').epochago();
-		});
-	</pre>
+	$(document).ready(function() {
+		$('.epochago').epochago();
+	});
 
 This will replace the text in all elements with a class of 'epochago' from:
 
@@ -29,8 +27,15 @@ to something like:
 
 In the Usage example above, fuzzy timestamps are generated on $(document).ready()
 
-To have the timestamps update automatically, simply setup a setInterval timer
+To have the timestamps update automatically, simply setup a setInterval timer outside $(document).ready()
 
-	setInterval($('.epochago').epochago(), 60000);
+	$(document).ready(function() {
+		$('.epochago').epochago();
+	});
+	setInterval("$('.epochago').epochago()", 60000);
 
 This will update every 60 seconds (60000ms)
+
+## Exceptions
+
+Make sure to not include a title attribute on the element containing the unix epoch timestamp.

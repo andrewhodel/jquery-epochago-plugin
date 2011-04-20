@@ -2,15 +2,18 @@
 $.fn.epochago = function(options) {
 
 	var defaults = {
-		length: 300,
-		ellipsisText: "..."
 	};
 	var options = $.extend(defaults, options);
 
 	return this.each(function() {
 
 		obj = $(this);
-		var body = obj.html();
+		if (obj.attr('title') != undefined) {
+			var body = obj.attr('title');
+		} else {
+			var body = obj.html();
+			obj.attr('title', obj.html());
+		}
 
 		var ts = Math.round((new Date()).getTime() / 1000);
 		var seconds = ts - body;
